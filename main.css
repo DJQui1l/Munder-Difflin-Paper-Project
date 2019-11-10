@@ -1,0 +1,67 @@
+@font-face {
+  font-family: Bitter;
+  src:url(Fonts/Bitter-Regular.otf);
+}
+
+body {
+  margin: 0 auto;
+  font-family: Bitter;
+}
+
+#main-container {
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
+  grid-template-areas:
+  " header        header        header        header "
+  " mainNav       mainNav       mainNav       mainNav "
+  " sideNav       mainStory     mainStory    mainStory "
+  " sideNav       otherstories  otherstories2 . "
+  " sideNav       otherstories  otherstories2 . "
+  " sideNav       otherstories3 otherstories4 . "
+  " sideNav       otherstories3 otherstories4 . "
+  " footer        footer        footer       footer "
+                        ;
+  background-color: slategrey;
+}
+#maintitle {
+  background-color: purple;
+  grid-area: header;
+}
+
+#main-nav{
+  background-color: #CCC345;
+  grid-area: mainNav;
+}
+
+#side-nav{
+  background-color: #CCA345;
+  grid-area: sideNav;
+}
+
+#main-story {
+  background-color: #CCF345;
+  grid-area: mainStory;
+}
+#otherstories{
+  background-color: #6DC066;
+  grid-area: otherstories;
+}
+
+#otherstories2 {
+  background-color: #ffb5e7;
+  grid-area: otherstories2;
+}
+#otherstories3 {
+  background-color: #6d0303;
+  grid-area: otherstories3;
+}
+#otherstories4 {
+  background-color: #957b5f;
+  grid-area: otherstories4;
+}
+
+#main-footer {
+  background-color: #000;
+  grid-area: footer;
+}
