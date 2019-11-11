@@ -8,60 +8,176 @@ body {
   font-family: Bitter;
 }
 
+#maintitle,
+#main-nav,
+#article-nav,
+#main-story,
+#otherstories,
+#otherstories2,
+#otherstories3,
+#otherstories4 ,
+#side-Story-1,
+#side-Story-2 ,
+#side-Story-3,
+#side-Story-4,
+#main-footer{
+  border: solid 1px;
+    /* background-color: #fffae8; */
+}
+
 #main-container {
   display:grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
+  grid-template-columns: 15% 30% 30% 25%;
+  grid-template-rows: /*25% 5% 25% 5% 5% 5% 5% 25%*/
+   2fr 0.5fr 2fr 0.25fr 0.25fr 0.25fr 0.25fr 2fr;
   grid-template-areas:
   " header        header        header        header "
   " mainNav       mainNav       mainNav       mainNav "
-  " sideNav       mainStory     mainStory    mainStory "
-  " sideNav       otherstories  otherstories2 . "
-  " sideNav       otherstories  otherstories2 . "
-  " sideNav       otherstories3 otherstories4 . "
-  " sideNav       otherstories3 otherstories4 . "
-  " footer        footer        footer       footer "
+  " sideNav       mainStory     mainStory     mainStory "
+  " sideNav       otherstories  otherstories2 sideStory1 "
+  " sideNav       otherstories  otherstories2 sideStory2 "
+  " sideNav       otherstories3 otherstories4 sideStory3 "
+  " sideNav       otherstories3 otherstories4 sideStory4 "
+  " footer        footer        footer        footer "
                         ;
-  background-color: slategrey;
+  /* background-color: slategrey; */
 }
+
+
+#maintitle, #maintile:before{
+    background: 50% 50% / cover;
+}
+
+#maintitle::before{
+background-image: url("https://download.hipwallpaper.com/desktop/1920/1080/80/74/PBrzZ9.jpg");
+bottom: 0;
+   content: "";
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   display: block;
+
+   background-size: cover;
+   transform-origin: center center 0;
+   transform: translateZ(-1px) scale(2);
+   z-index: -1;
+   min-height: 100vh;
+}
+
 #maintitle {
-  background-color: purple;
+  /* background-color: #fffae8; */
   grid-area: header;
+  padding: 3%;
+  box-sizing: border-box;
+   min-height: 100vh;
+   /* padding: 30vw 0 5vw; */
+
+
+
+
+}
+
+
+#maintitle h1{
+  font-size: 85px;
+  white-space: nowrap;
+}
+
+#maintitle h3{
+  display: block;
+position: absolute;
+font-size: 26px;
+white-space: nowrap;
+top: 180px;
+left: 71px;
+
 }
 
 #main-nav{
-  background-color: #CCC345;
+  /* background-color: #CCC345; */
   grid-area: mainNav;
+
 }
 
-#side-nav{
-  background-color: #CCA345;
+#main-nav li {
+display:inline-block;
+
+}
+
+
+#article-nav{
+  /* background-color: #CCA345; */
   grid-area: sideNav;
 }
 
 #main-story {
-  background-color: #CCF345;
+  /* background-color: #CCF345; */
   grid-area: mainStory;
 }
+
+#otherstories,
+#otherstories2,
+#otherstories3,
+#otherstories4 {
+
+  text-align: center;
+  width: 100%;
+
+}
+#otherstories,
+#otherstories2,
+#otherstories3,
+#otherstories4 p {
+
+}
+
 #otherstories{
-  background-color: #6DC066;
+  /* background-color: #6DC066; */
   grid-area: otherstories;
 }
 
 #otherstories2 {
-  background-color: #ffb5e7;
+  /* background-color: #ffb5e7; */
   grid-area: otherstories2;
 }
 #otherstories3 {
-  background-color: #6d0303;
+  /* background-color: #6d0303; */
   grid-area: otherstories3;
 }
 #otherstories4 {
-  background-color: #957b5f;
+  /* background-color: #957b5f; */
   grid-area: otherstories4;
 }
 
+#side-Story-1,
+#side-Story-2 ,
+#side-Story-3,
+#side-Story-4{
+  display: block;
+
+  text-align: center;
+
+}
+
+#side-Story-1 {
+  /* background-color: inherit; */
+  grid-area: sideStory1;
+}
+#side-Story-2 {
+  /* background-color: inherit; */
+  grid-area: sideStory2;
+}
+#side-Story-3 {
+  /* background-color: inherit; */
+  grid-area: sideStory3;
+}
+#side-Story-4 {
+  /* background-color: inherit; */
+  grid-area: sideStory4;
+}
+
 #main-footer {
-  background-color: #000;
+  /* background-color: inherit; */
   grid-area: footer;
 }
