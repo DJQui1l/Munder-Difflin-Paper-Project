@@ -1,0 +1,29 @@
+body {
+  /* background-color: red; */
+}
+#main-grid{
+  display:grid;
+  width:100%;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 60px 60px 60px;
+  grid-template-areas: "navbar navbar navbar"
+                      "main main side "
+                      "..."
+}
+
+#main-grid nav {
+  margin:auto;
+  background-color:green;
+  grid-area: navbar;
+}
+
+#main-grid section {
+  margin:auto;
+  background-color:blue;
+  grid-area: main;
+}
+#main-grid aside {
+  margin:auto;
+  background-color:red;
+  grid-area: side;
+}
